@@ -43,6 +43,15 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 - **Gaveta (☰):** navegação geral do ecossistema (Início) e **tema** (claro / escuro / sistema). Fecha com ×, clicando fora ou com Esc.
 - **Trocar de tela:** fecha mensagens flutuantes e descarta dados temporários da tela anterior.
 
+### Entrada (escolher empresa)
+- **Tela mínima:** logo, título e um campo "nome ou código".
+- **Lista:** conforme a pessoa digita, aparece a lista, com o **código exato primeiro**, depois os códigos que começam com o que foi digitado e depois o resto.
+- **Enter:**
+  - com o **código exato** (ex.: `58`), entra direto na empresa;
+  - se a busca achou **uma só** empresa, entra nela;
+  - com várias, um toast pede para escolher na lista;
+  - sem nenhuma, avisa que não achou.
+
 ### Travas por falta de dado
 - Uma página que depende de um dado ainda não importado fica **travada**, com opacidade e cursor de bloqueio.
 - Clicar nela mostra um **aviso** dizendo o que falta e com o botão para ir importar ("Importar serviços tomados").
