@@ -134,7 +134,11 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 
 ### "Fora do padrão"
 - **Padrão pela maioria** dos dados (ex.: o lançamento mais usado naquele CFOP) **ou** pelo **cadastro**, quando existe regra fixa.
-- **Cada linha mostra:** o que veio · o que era esperado · a categoria.
+- **Agrupado por "dono" do padrão:** CFOP/natureza nas notas fiscais, fornecedor/cliente nos serviços.
+  - Cada grupo é recolhível e tem caixa para marcar o grupo inteiro, a quantidade, o esperado e o total.
+  - Os grupos pendentes ficam abertos. Os corrigidos vão para a seção **"Corrigidos (N)"**, recolhidos.
+  - **"Ordenar por"** fica no título: nome (A-Z) · valor · data.
+- **Cada nota mostra:** data · número · o que veio · o que era esperado · valor.
 - **Correção num clique:** quando o valor usado pertence a outra categoria, a linha oferece "Colocar em X", que abre o cadastro já preenchido.
 
 ---
