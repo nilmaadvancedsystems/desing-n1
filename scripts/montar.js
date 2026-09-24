@@ -61,6 +61,7 @@ function modal(o){
   return new Promise(function(res){
     var ov=document.getElementById('modalOverlay');
     document.getElementById('modalIcon').innerHTML=svg(o.icon||'alert');
+    ov.querySelector('.modal').classList.toggle('modal-ok',o.tom==='ok');
     document.getElementById('modalTitle').textContent=o.title;
     document.getElementById('modalText').innerHTML=o.text||'';
     var a=document.getElementById('modalActions');a.innerHTML='';

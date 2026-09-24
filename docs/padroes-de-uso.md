@@ -156,9 +156,10 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
    - No topo, um **resumo** com a conta em destaque (código + nome + origem) e os três números **Relatório · Notas · Diferença**. Sem repetir totais que já aparecem embaixo.
    - Aparece uma **caixa "Pendências"**, só com as seções que têm itens: **Faltando na conta · Duplicadas na conta · A mais na conta**. Cada seção tem título com a quantidade e o total, sem frase explicativa.
    - Todas as seções usam as **mesmas colunas: Data · Nota · Participante · Contrapartida (só o número) · Valor**. O histórico completo do relatório fica no *hover*. O CSV usa as mesmas colunas.
-   - Embaixo, à direita: **Baixar resultado** + **Reimportar**. O Reimportar escolhe o arquivo novo e já confere de novo.
+   - Embaixo, à direita: **Baixar resultado** + **Corrigi, quero reconferir**. Esse botão escolhe o arquivo novo e já confere de novo.
 4. **Sem pendência:**
-   - Reimportar vira **Ok**, que volta para a Conferência.
+   - Se veio de **Corrigi, quero reconferir**, aparece o **aviso de sucesso** por cima da tela: check verde, **"Tudo certo!"**, a conta e que ela ficou **Ok**, botão **Ok**.
+   - O botão **Corrigi, quero reconferir** vira **Ok**, que volta para a Conferência.
    - A conta fica **Ok** automaticamente na tabela.
    - Se depois voltarem pendências, o Ok sai sozinho.
 5. **Seguir com pendência:**
@@ -211,6 +212,7 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 |---|---|
 | Algo foi salvo ou alterado | **Toast** curto (some em ~3,6 s) |
 | Ação que não dá para desfazer (apagar, sobrepor) | **Modal** com ícone, título em pergunta, texto com números em negrito, **Voltar** + ação |
+| Fim de uma correção que deu certo (reconferência sem pendência) | **Modal de sucesso** (`tom:'ok'`): check verde grande, título curto ("Tudo certo!"), uma frase, só **Ok** |
 | Erro ou atenção dentro de um card | **Alerta** (ícone + título + texto) |
 | Deu certo e precisa ficar visível | Alerta **verde** ou faixa curta |
 | Sem dado | **Vazio** curto em cinza, dizendo o que falta |

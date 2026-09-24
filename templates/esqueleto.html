@@ -414,6 +414,12 @@
   .modal{background:var(--surface);border-radius:12px;box-shadow:var(--shadow-lg);max-width:448px;width:100%;padding:0;overflow:hidden;
     animation:popIn .18s ease-out both;}
   .modal-icon{display:none;}
+  .modal.modal-ok{text-align:center;}
+  .modal.modal-ok .modal-icon{display:flex;justify-content:center;padding:24px 16px 0;color:var(--success);}
+  .modal.modal-ok .modal-icon svg{width:48px;height:48px;}
+  .modal.modal-ok h3{border-bottom:0;font-size:16px;padding:12px 16px 0;}
+  .modal.modal-ok p{padding:8px 24px 20px;color:var(--ink-muted);}
+  .modal.modal-ok .modal-actions{justify-content:center;}
   .modal h3{font-size:14px;font-weight:600;padding:16px;border-bottom:1px solid var(--border);margin:0;}
   .modal p{font-size:14px;color:var(--ink);padding:16px;}
   .modal p b{font-weight:600;}
@@ -1077,6 +1083,7 @@ function modal(o){
   return new Promise(function(res){
     var ov=document.getElementById('modalOverlay');
     document.getElementById('modalIcon').innerHTML=svg(o.icon||'alert');
+    ov.querySelector('.modal').classList.toggle('modal-ok',o.tom==='ok');
     document.getElementById('modalTitle').textContent=o.title;
     document.getElementById('modalText').innerHTML=o.text||'';
     var a=document.getElementById('modalActions');a.innerHTML='';
