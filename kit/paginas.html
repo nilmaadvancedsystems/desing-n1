@@ -1,0 +1,502 @@
+<!-- ======================= FUNDAMENTOS ======================= -->
+<section class="kit-page" data-view="cores" hidden>
+  <div class="card">
+    <h3>Paleta (tokens)</h3>
+    <p class="sub">Todas as cores vêm de variáveis CSS. O tema claro/escuro troca só os valores — o código dos componentes é o mesmo. Clique numa cor pra copiar o nome da variável.</p>
+    <div class="kit-swatches" id="kitSwatches"></div>
+  </div>
+  <div class="card">
+    <h3>Cores de significado</h3>
+    <p class="sub">Use sempre pelo significado, nunca pela cor.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Uso</th><th>Variável</th><th>Onde aparece</th></tr></thead>
+      <tbody>
+        <tr><td><span class="per-dot kit-dot" style="background:var(--accent)"></span>Marca / ação principal</td><td class="kit-mono">--accent · --btn-primary</td><td>Botão principal, aba ativa, links, Serviços prestados</td></tr>
+        <tr><td><span class="per-dot kit-dot" style="background:var(--danger)"></span>Entrada / divergência / atenção</td><td class="kit-mono">--danger</td><td>Entradas, diferenças, "Conferido" manual</td></tr>
+        <tr><td><span class="per-dot kit-dot" style="background:var(--success)"></span>Saída / ok / confirmado</td><td class="kit-mono">--success</td><td>Saídas, "Ok", mensagens de sucesso</td></tr>
+        <tr><td><span class="per-dot kit-dot" style="background:var(--warn)"></span>Aviso / serviços tomados</td><td class="kit-mono">--warn</td><td>Avisos de período, Serviços tomados</td></tr>
+        <tr><td><span class="per-dot kit-dot" style="background:var(--ink-muted)"></span>Texto secundário</td><td class="kit-mono">--ink-muted</td><td>Rótulos, dicas, colunas de apoio</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section class="kit-page" data-view="tipografia" hidden>
+  <div class="card">
+    <h3>Escala de texto</h3>
+    <p class="sub">Fonte do sistema (a mesma do GitHub). Números sempre com algarismos alinhados (<span class="kit-mono">font-variant-numeric: tabular-nums</span>).</p>
+    <div class="kit-demo">
+<h2 class="page-title">Título da página — 20px / 600</h2>
+<h3>Título de card — 14px / 600</h3>
+<p>Texto de corpo — 14px / 400</p>
+<p class="sub">Descrição (.sub) — 14px, cinza</p>
+<p class="hint">Dica / texto de apoio (.hint) — 12px, cinza</p>
+<p class="stat-label">Rótulo de número (.stat-label) — 12px</p>
+<p class="stat-value">382.991,80</p>
+    </div>
+  </div>
+</section>
+
+<section class="kit-page" data-view="icones" hidden>
+  <div class="card">
+    <h3>Ícones</h3>
+    <p class="sub">Traço de 1,75px, 24×24, desenhados em SVG inline — herdam a cor do texto. No código, use <span class="kit-mono">svg('nome')</span> (a função e o mapa ICONS estão no fim deste arquivo). Clique pra copiar o nome.</p>
+    <div class="kit-icons" id="kitIcons"></div>
+  </div>
+</section>
+
+<!-- ======================= ESTRUTURA ======================= -->
+<section class="kit-page" data-view="estrutura" hidden>
+  <div class="card">
+    <h3>Esqueleto da tela</h3>
+    <p class="sub">Esta própria página usa o esqueleto: cabeçalho com ☰ + logo + trilha, abas da seção embaixo, menu lateral fixo com as seções (separadas por linha entre grupos), título da página com ações à direita e o conteúdo.</p>
+    <ul class="kit-lista">
+      <li><b>Menu lateral</b> — sempre as mesmas seções; clicar abre a <b>primeira página</b> da seção na primeira aba interna.</li>
+      <li><b>Abas de cima</b> — as páginas da seção aberta; voltam onde a pessoa parou.</li>
+      <li><b>☰ (gaveta)</b> — navegação geral do ecossistema + tema claro/escuro/sistema.</li>
+      <li><b>Canto superior direito</b> — ações da página (ex.: Baixar CSV, chave On/Off).</li>
+      <li><b>Seletor interno</b> (Entradas/Saídas, Resumido/Detalhado) — logo abaixo do título.</li>
+    </ul>
+    <details class="kit-code" open><summary>Código do esqueleto</summary><pre><code id="kitCodigoEsqueleto"></code></pre></details>
+  </div>
+  <div class="card">
+    <h3>Seletor interno da página</h3>
+    <div class="kit-demo">
+<div class="steps">
+  <button class="step-pill" type="button" aria-current="true">Entradas</button>
+  <button class="step-pill" type="button">Saídas</button>
+  <button class="step-pill" type="button">Tomados</button>
+  <button class="step-pill" type="button">Prestados</button>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="kit-page" data-view="login" hidden>
+  <div class="card">
+    <h3>Entrada (login por empresa)</h3>
+    <p class="sub">Tela mínima: logo, título e a busca. A lista de resultados usa o componente de lista suspensa.</p>
+    <div class="kit-demo kit-frame">
+<div class="auth">
+  <span class="auth-mark" aria-hidden="true"><svg viewBox="0 0 720 1176"><use href="#nlLogo"/></svg></span>
+  <h1 class="auth-title">Entrar na Conferência Contábil</h1>
+  <div class="auth-box">
+    <div class="field">
+      <label for="kitBusca">Empresa</label>
+      <input type="text" id="kitBusca" placeholder="nome ou código do ERP" autocomplete="off">
+    </div>
+  </div>
+  <p class="hint">Versão: beta 0.1.18</p>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= COMPONENTES ======================= -->
+<section class="kit-page" data-view="botoes" hidden>
+  <div class="card">
+    <h3>Botões</h3>
+    <p class="sub">Um principal por área (vermelho). Excluir em vermelho-contorno. Ações secundárias em contorno.</p>
+    <div class="kit-demo">
+<div class="btn-row">
+  <button class="btn btn-primary" type="button">Importar</button>
+  <button class="btn btn-outline" type="button">Baixar resultado</button>
+  <button class="btn" type="button">Filtrar</button>
+  <button class="btn btn-danger" type="button">Excluir</button>
+  <button class="btn btn-primary" type="button" disabled>Desabilitado</button>
+  <button class="btn btn-primary" type="button" disabled><span class="btn-spinner"></span>Importando…</button>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Pequenos, com ícone e em texto</h3>
+    <div class="kit-demo">
+<div class="btn-row">
+  <button class="btn btn-sm btn-primary" type="button">Adicionar</button>
+  <button class="btn btn-sm" type="button"><i data-ico="plus"></i>Vincular conta</button>
+  <button class="btn btn-sm btn-outline" type="button">Marcar como conferido</button>
+  <button class="btn btn-ghost btn-sm" type="button">&larr; Voltar para Movimento</button>
+  <button class="link-btn" type="button">Reimportar</button>
+  <button class="link-btn" type="button">Limpar</button>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Botões só de ícone</h3>
+    <p class="sub">Sempre com <span class="kit-mono">title</span> e <span class="kit-mono">aria-label</span>.</p>
+    <div class="kit-demo">
+<div class="btn-row">
+  <button class="icon-btn icon-btn-sm" type="button" title="Revisar esta conta" aria-label="Revisar esta conta"><i data-ico="fileSearch"></i></button>
+  <button class="icon-btn icon-btn-sm danger" type="button" title="Remover" aria-label="Remover"><i data-ico="x"></i></button>
+  <button class="icon-btn" type="button" title="Configurações" aria-label="Configurações"><i data-ico="settings"></i></button>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="kit-page" data-view="campos" hidden>
+  <div class="card">
+    <h3>Campo de texto e seleção</h3>
+    <div class="kit-demo">
+<div class="field">
+  <label for="kitConta">Conta contábil</label>
+  <input type="text" id="kitConta" placeholder="Vincular conta — nome ou código" autocomplete="off">
+</div>
+<div class="field" style="margin-bottom:0">
+  <label for="kitSit">Situação</label>
+  <select class="select-compact" id="kitSit">
+    <option>Todas</option><option>Pendentes</option><option>Conferidos</option>
+  </select>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Escolher arquivo (importação)</h3>
+    <div class="kit-demo">
+<div class="import-box-row">
+  <label class="file-picker" for="kitArq">
+    <i data-ico="upload"></i><span class="file-picker-name">Escolher arquivo</span>
+  </label>
+  <input type="file" id="kitArq" class="sr-only">
+  <button class="btn btn-primary" type="button">Importar</button>
+</div>
+<p class="hint">Excel do balancete (XLS Dados Arquivo)</p>
+<div class="import-box-row" style="margin-top:12px">
+  <label class="file-picker has-file">
+    <i data-ico="upload"></i><span class="file-picker-name">Report.xls</span>
+  </label>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Busca e filtros (dentro da caixa da tabela)</h3>
+    <div class="kit-demo">
+<div class="gh-box">
+  <div class="gh-box-head cons-head">
+    <div class="gh-search cons-busca">
+      <input type="text" placeholder="Procurar por nome, nota, CFOP ou lançamento" autocomplete="off">
+      <button type="button" class="gh-search-btn" title="Pesquisar" aria-label="Pesquisar"><i data-ico="search"></i></button>
+    </div>
+    <div class="gh-box-filters">
+      <span>Período</span>
+      <input type="text" class="data-mask" placeholder="dd/mm/aaaa" inputmode="numeric" maxlength="10" aria-label="Data inicial">
+      <span>até</span>
+      <input type="text" class="data-mask" placeholder="dd/mm/aaaa" inputmode="numeric" maxlength="10" aria-label="Data final">
+      <button type="button" class="btn btn-sm">Filtrar</button>
+    </div>
+  </div>
+  <p class="cons-resumo"><b>246</b> notas<span class="cons-sep">·</span><b>495.328,29</b></p>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Campo travado</h3>
+    <div class="kit-demo">
+<div class="locked">87528 — Serviços Prestados de Terceiros</div>
+    </div>
+  </div>
+</section>
+
+<section class="kit-page" data-view="chaves" hidden>
+  <div class="card">
+    <h3>Chave On/Off</h3>
+    <p class="sub">Liga/desliga uma regra da empresa. Clique pra testar.</p>
+    <div class="kit-demo">
+<span class="toggle-row">Apagar balancete ao sair<button type="button" class="toggle-switch" data-nilma-toggle role="switch" aria-checked="true" aria-label="Apagar balancete ao sair"><span class="toggle-txt">On</span><span class="toggle-track"><span class="toggle-knob"></span></span></button></span>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Caixa de marcar</h3>
+    <p class="sub">Vermelha = marcada à mão. Cinza = marcada automaticamente (não dá pra desmarcar aqui).</p>
+    <div class="kit-demo">
+<div class="btn-row">
+  <label class="kit-check"><input type="checkbox" checked> Conferido</label>
+  <label class="kit-check"><input type="checkbox"> Pendente</label>
+  <label class="kit-check"><input type="checkbox" class="chk-auto" checked disabled> Automático</label>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Seletor de tema</h3>
+    <div class="kit-demo">
+<div class="theme-toggle" role="group" aria-label="Tema">
+  <button type="button" data-theme-choice="light" aria-label="Tema claro" title="Claro"><i data-ico="sun"></i></button>
+  <button type="button" data-theme-choice="dark" aria-label="Tema escuro" title="Escuro"><i data-ico="moon"></i></button>
+  <button type="button" data-theme-choice="system" aria-label="Seguir o sistema" title="Sistema"><i data-ico="monitor"></i></button>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="kit-page" data-view="cards" hidden>
+  <div class="kit-demo">
+<div class="card">
+  <h3><span class="import-card-ico"><i data-ico="landmark"></i></span>Card com ícone</h3>
+  <p class="sub">Descrição curta do que a área faz.</p>
+  <p class="hint">Dica em uma linha.</p>
+</div>
+  </div>
+  <div class="kit-demo">
+<div class="card">
+  <div class="card-head">
+    <h3>Card com controle no título</h3>
+    <label class="card-head-ctl">Ordenar por
+      <select class="select-compact"><option>CFOP (A-Z)</option><option>Valor</option><option>Data</option></select>
+    </label>
+  </div>
+  <p class="empty">Nenhuma nota fora do padrão.</p>
+</div>
+  </div>
+  <div class="kit-demo">
+<div class="painel">
+  <div class="painel-head"><p class="painel-titulo">Painel</p><p class="painel-sub">subtítulo em cinza</p></div>
+  <p class="hint" style="margin:0">Conteúdo do painel (gráfico, lista, tabela).</p>
+</div>
+  </div>
+  <div class="kit-demo">
+<div class="stat-grid">
+  <div class="stat"><p class="stat-label">Entradas no período</p><p class="stat-value cor-entrada">83.917,08</p></div>
+  <div class="stat"><p class="stat-label">Saídas no período</p><p class="stat-value cor-saida">9.959,00</p></div>
+  <div class="stat"><p class="stat-label">Notas</p><p class="stat-value">166</p></div>
+  <div class="stat"><p class="stat-label">Fora do padrão</p><p class="stat-value">3</p></div>
+</div>
+  </div>
+</section>
+
+<section class="kit-page" data-view="tabelas" hidden>
+  <div class="card">
+    <h3>Tabela padrão</h3>
+    <p class="sub">Cabeçalho fixo ao rolar. Valores com <span class="kit-mono">class="num"</span> (alinhados à direita).</p>
+    <div class="kit-demo">
+<div class="table-wrap"><table>
+  <thead><tr><th>Data</th><th>Nota</th><th>Fornecedor / cliente</th><th>CFOP</th><th class="num">Valor</th></tr></thead>
+  <tbody>
+    <tr><td>05/01/2026</td><td>82</td><td class="wrap">49.816.918 VALQUIRIA DIAS DE ALMEIDA</td><td>1407</td><td class="num">720,00</td></tr>
+    <tr><td>08/01/2026</td><td>2052</td><td class="wrap">TECNNOAR SERVICO E COMERCIO EIRELLI ME</td><td>1556</td><td class="num">262,20</td></tr>
+  </tbody>
+</table></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Tabela ordenável</h3>
+    <div class="kit-demo">
+<div class="table-wrap"><table>
+  <thead><tr>
+    <th class="th-sort">Data<span class="th-sort-ico"> ▲</span></th>
+    <th class="th-sort">Nota<span class="th-sort-ico"></span></th>
+    <th class="th-sort num">Valor<span class="th-sort-ico"></span></th>
+  </tr></thead>
+  <tbody><tr><td>05/01/2026</td><td>82</td><td class="num">720,00</td></tr></tbody>
+</table></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Tabela compacta com situação</h3>
+    <p class="sub">Usada na conferência com o balancete: Ok, diferença (com Revisar), Conferido.</p>
+    <div class="kit-demo">
+<div class="table-wrap" style="max-height:none;"><table class="table-compact">
+  <thead><tr><th>Conta(s)</th><th>CFOP(s)</th><th class="num">Soma das notas</th><th class="num">Saldo do balancete</th><th class="num">Situação</th></tr></thead>
+  <tbody>
+    <tr><td><b>75002 — Venda de Produtos</b></td><td>5101</td><td class="num">8.160,00</td><td class="num">8.160,00</td><td><div class="sit"><span class="badge badge-ok">Ok</span><span class="sit-vazio"></span></div></td></tr>
+    <tr><td><b>87529 — Telefone</b></td><td>—</td><td class="num">407,28</td><td class="num">1.010,05</td><td><div class="sit"><span class="badge badge-bad">-602,77</span><button type="button" class="icon-btn icon-btn-sm" title="Revisar esta conta" aria-label="Revisar esta conta"><i data-ico="fileSearch"></i></button></div></td></tr>
+    <tr><td><b>96088 — Devolução</b></td><td>1101</td><td class="num">93,40</td><td class="num">0,00</td><td><div class="sit"><span class="badge badge-conferido" title="Conferido manualmente">Conferido</span><button type="button" class="icon-btn icon-btn-sm" title="Revisar esta conta" aria-label="Revisar esta conta"><i data-ico="fileSearch"></i></button></div></td></tr>
+  </tbody>
+</table></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Lista de conferir (marcadas descem riscadas)</h3>
+    <p class="sub">Precisa do id <span class="kit-mono">natLista</span> (ou <span class="kit-mono">natListaServ</span>) no contêiner — é ele que apaga a linha marcada.</p>
+    <div class="kit-demo">
+<div id="natLista"><div class="table-wrap" style="max-height:none;"><table>
+  <thead><tr><th style="width:34px"></th><th>CFOPs — Natureza</th><th class="num">Notas</th><th class="num">Valor</th></tr></thead>
+  <tbody>
+    <tr><td><input type="checkbox" aria-label="Marcar como conferido"></td><td class="wrap"><span class="badge badge-bad" style="margin-right:7px">Entrada</span><span class="risco">1407 — Uso e Consumo</span></td><td class="num">41</td><td class="num">12.345,67</td></tr>
+    <tr class="feito"><td><input type="checkbox" checked aria-label="Marcar como conferido"></td><td class="wrap"><span class="badge badge-ok" style="margin-right:7px">Saída</span><span class="risco">5101 — Venda de produção do estabelecimento</span></td><td class="num">5</td><td class="num">8.160,00</td></tr>
+  </tbody>
+</table></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="kit-page" data-view="badges" hidden>
+  <div class="card">
+    <h3>Badges</h3>
+    <div class="kit-demo">
+<div class="btn-row">
+  <span class="badge badge-ok">Ok</span>
+  <span class="badge badge-bad">-602,77</span>
+  <span class="badge badge-neutral">Lançamento 527</span>
+  <span class="badge badge-conferido">Conferido</span>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Conta vinculada e pílulas</h3>
+    <div class="kit-demo">
+<div class="btn-row">
+  <span class="ndp-chip">87529 — Telefone<button type="button" title="Desvincular">&times;</button></span>
+  <span class="vista-pill"><button type="button" class="vista-pill-txt">Lançamento Automático <b>0001</b></button><button type="button" class="vista-pill-x" aria-label="Remover">&times;</button></span>
+  <button type="button" class="vista-add"><i data-ico="plus"></i>Lançamento à vista</button>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Tipo com bolinha de cor</h3>
+    <div class="kit-demo">
+<div class="btn-row">
+  <span class="cons-tipo"><i style="background:var(--danger)"></i>Entrada</span>
+  <span class="cons-tipo"><i style="background:var(--success)"></i>Saída</span>
+  <span class="cons-tipo"><i style="background:var(--warn)"></i>Tomado</span>
+  <span class="cons-tipo"><i style="background:var(--accent)"></i>Prestado</span>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Filtros em linha</h3>
+    <div class="kit-demo">
+<div class="chip-row">
+  <span class="chip-lbl">Situação</span>
+  <select class="select-compact" aria-label="Situação"><option>Todas</option><option>Pendentes</option></select>
+  <span class="chip-sep"></span>
+  <button type="button" class="chip-f on">CFOP 5101 &times;</button>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="kit-page" data-view="avisos" hidden>
+  <div class="card">
+    <h3>Alertas</h3>
+    <div class="kit-demo">
+<div class="alert"><i data-ico="alert"></i><div><p class="alert-title">Atenção aos períodos</p><p class="alert-text">Saídas sem nenhuma nota em mar/26, abr/26 — confira se faltou algum relatório.</p></div></div>
+    </div>
+    <div class="kit-demo">
+<div class="alert" style="border-color:var(--success);background:var(--success-soft);color:var(--success-ink)"><i data-ico="checkCircle"></i><div><p class="alert-title">157 nota(s) nova(s) guardada(s)</p><p class="alert-text">Total guardado: 157.</p></div></div>
+    </div>
+    <div class="kit-demo">
+<div class="parity"><i data-ico="checkCircle"></i><span>Entradas e saídas cobrem os mesmos meses, sem buracos.</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Mensagem rápida e confirmação</h3>
+    <p class="sub">Toast some sozinho em ~3,5s. O modal pergunta antes de algo que não dá pra desfazer.</p>
+    <div class="btn-row">
+      <button class="btn" type="button" data-kit-toast>Mostrar toast</button>
+      <button class="btn btn-outline" type="button" data-kit-modal>Abrir confirmação</button>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Vazio</h3>
+    <div class="kit-demo">
+<p class="empty">Nenhuma nota guardada nesse período.</p>
+    </div>
+    <div class="kit-demo">
+<div class="gh-box"><div class="gh-blank"><i data-ico="search"></i><h4>Nenhuma nota bate com a busca</h4><p>Tente outro nome, número, CFOP ou período.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="kit-page" data-view="listas" hidden>
+  <div class="card">
+    <h3>Lista suspensa (busca de empresa, fornecedor, conta)</h3>
+    <div class="kit-demo">
+<div class="table-wrap scroll-list" style="max-width:420px">
+  <div class="emp-list">
+    <button type="button" class="emp-item"><span class="emp-cod">58</span><span class="emp-txt"><span class="emp-nome">TORNEARIA VOLPONI INDUSTRIA E COMERCIO LTDA</span><span class="emp-reg">Simples Nacional</span></span></button>
+    <button type="button" class="emp-item"><span class="emp-cod">429</span><span class="emp-txt"><span class="emp-nome">POSTO DE COMBUSTIVEIS ANDRIELE LIMITADA</span><span class="emp-reg">Presumido</span></span></button>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Ranking com barra</h3>
+    <div class="kit-demo">
+<div class="rank" style="max-width:420px">
+  <button type="button" class="rank-item"><span class="rank-nome">Uso e Consumo</span><span class="rank-val">12.345,67</span><span class="rank-barra"><span style="width:100%;background:var(--danger)"></span></span></button>
+  <button type="button" class="rank-item"><span class="rank-nome">Venda de produção</span><span class="rank-val">8.160,00</span><span class="rank-barra"><span style="width:66%;background:var(--success)"></span></span></button>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PADRÕES ======================= -->
+<section class="kit-page" data-view="importacao" hidden>
+  <p class="sub">Tela de importação: card com o arquivo, resultado embaixo e, depois de importado, Reimportar/Excluir à direita.</p>
+  <div class="kit-demo">
+<div class="card">
+  <h3><span class="import-card-ico"><i data-ico="arrowDown"></i></span>Importar entradas</h3>
+  <div class="import-box-row">
+    <label class="file-picker"><i data-ico="upload"></i><span class="file-picker-name">Escolher arquivo</span></label>
+    <button class="btn btn-primary" type="button">Importar</button>
+  </div>
+  <p class="hint">Relatório de notas de entrada em Excel</p>
+</div>
+<div class="btn-row" style="justify-content:flex-end;margin-top:0">
+  <button class="link-btn" type="button">Reimportar</button>
+  <button class="btn btn-danger" type="button">Excluir</button>
+</div>
+  </div>
+</section>
+
+<section class="kit-page" data-view="resumo" hidden>
+  <p class="sub">Resumo em lista: uma linha por item, colunas alinhadas, bolinha de cor por tipo.</p>
+  <div class="kit-demo">
+<div class="per-resumo">
+  <div class="per-linha per-head"><span>Arquivo</span><span>Período</span><span class="per-num">Meses</span><span class="per-num">Notas</span><span class="per-num">Valor</span></div>
+  <div class="per-linha"><span class="per-nome"><i class="per-dot" style="background:var(--ink-muted)"></i>Balancete</span><span class="per-periodo"><span class="per-vazio">importado em</span> 24/09/2026 às 16:37</span><span class="per-num"></span><span class="per-num">163 contas</span><span class="per-num per-valor"></span></div>
+  <div class="per-linha"><span class="per-nome"><i class="per-dot" style="background:var(--danger)"></i>Entradas</span><span class="per-periodo">05/01 – 28/08/2026</span><span class="per-num">8 meses</span><span class="per-num">157 notas</span><span class="per-num per-valor">83.917,08</span></div>
+  <div class="per-linha"><span class="per-nome"><i class="per-dot" style="background:var(--success)"></i>Saídas</span><span class="per-periodo"><span class="per-vazio">Não importado</span></span><span class="per-num"></span><span class="per-num"></span><span class="per-num per-valor"></span></div>
+</div>
+  </div>
+  <p class="sub" style="margin-top:16px">Resumo de verificação: o item em destaque, três números e a composição.</p>
+  <div class="kit-demo">
+<div class="vc-resumo">
+  <div class="vc-resumo-conta"><p class="vc-resumo-rot">Conta contábil</p><p class="vc-resumo-nome"><b>87528</b> — Serviços Prestados de Terceiros</p><p class="vc-resumo-fonte">Serviços tomados · Serviços tomados gerais</p></div>
+  <div class="vc-resumo-nums">
+    <div class="vc-num"><p class="vc-num-rot">Relatório da conta</p><p class="vc-num-val">25.104,04</p></div>
+    <div class="vc-num"><p class="vc-num-rot">Notas fiscais</p><p class="vc-num-val">18.053,13</p></div>
+    <div class="vc-num bad"><p class="vc-num-rot">Diferença</p><p class="vc-num-val">-7.050,91</p></div>
+  </div>
+  <p class="vc-resumo-comp"><span>Composição da diferença</span>A mais no relatório <b>− 7.050,91</b></p>
+</div>
+  </div>
+  <div class="kit-demo">
+<div class="vc-pend">
+  <div class="vc-pend-head"><h3>Pendências (2)</h3><button type="button" class="btn btn-sm btn-outline">Marcar como conferido</button></div>
+  <div class="vc-secao"><h4>A mais no relatório (2) — <span style="color:var(--ink-muted);font-weight:600">7.050,91</span></h4><p class="sub">Linha do relatório que não bateu com nenhuma nota dessa conta.</p></div>
+</div>
+  </div>
+</section>
+
+<section class="kit-page" data-view="graficos" hidden>
+  <div class="card">
+    <h3>Cobertura por mês</h3>
+    <div class="kit-demo">
+<div class="per-grade" style="--n:4">
+  <span></span><span class="per-mes">jan/26</span><span class="per-mes">fev/26</span><span class="per-mes">mar/26</span><span class="per-mes">abr/26</span>
+  <span class="per-lbl">Entradas</span>
+  <span class="per-cel" style="background:color-mix(in srgb, var(--danger) 60%, var(--surface-3))"></span>
+  <span class="per-cel" style="background:color-mix(in srgb, var(--danger) 100%, var(--surface-3))"></span>
+  <span class="per-cel" style="background:color-mix(in srgb, var(--danger) 35%, var(--surface-3))"></span>
+  <span class="per-cel vazio"></span>
+  <span class="per-lbl">Saídas</span>
+  <span class="per-cel" style="background:color-mix(in srgb, var(--success) 80%, var(--surface-3))"></span>
+  <span class="per-cel vazio"></span>
+  <span class="per-cel fora"></span>
+  <span class="per-cel fora"></span>
+</div>
+    </div>
+  </div>
+  <div class="painel">
+    <div class="painel-head"><p class="painel-titulo">Notas por mês</p><p class="painel-sub">quantidade importada</p></div>
+    <div class="kit-demo">
+<div class="chart">
+  <div class="chart-col" style="cursor:default"><span class="chart-plot"><span class="chart-bar" style="background:var(--danger);height:80px"></span><span class="chart-bar" style="background:var(--success);height:30px"></span></span><span class="chart-lbl">Jan/26</span></div>
+  <div class="chart-col" style="cursor:default"><span class="chart-plot"><span class="chart-bar" style="background:var(--danger);height:104px"></span><span class="chart-bar" style="background:var(--success);height:12px"></span></span><span class="chart-lbl">Fev/26</span></div>
+  <div class="chart-col" style="cursor:default"><span class="chart-plot"><span class="chart-bar" style="background:var(--danger);height:50px"></span><span class="chart-bar" style="background:var(--success);height:0px"></span></span><span class="chart-lbl">Mar/26</span></div>
+</div>
+<div class="chart-legend"><span><i class="chart-dot" style="background:var(--danger)"></i>Entradas</span><span><i class="chart-dot" style="background:var(--success)"></i>Saídas</span></div>
+    </div>
+  </div>
+</section>
