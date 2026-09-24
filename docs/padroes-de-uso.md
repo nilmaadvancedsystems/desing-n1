@@ -153,10 +153,9 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
    - **Conferir**.
 3. **Resultado:**
    - O formulário **some**.
-   - No topo, um **resumo** com a conta em destaque (código + nome + origem), os três números **Relatório · Notas · Diferença** e a linha **"Composição da diferença"**, só com as partes que têm valor.
-   - Aparece uma **caixa "Pendências (N)"**, só com as seções que têm itens: Faltando · Duplicadas · A mais.
-   - O histórico do relatório é **quebrado em colunas** (Nota · Participante · Onde a nota está · Contrapartida). O texto completo fica no *hover*.
-   - A coluna **"Onde a nota está"** procura aquele número nos outros dados e mostra onde ele está, ou "Não está nas notas importadas".
+   - No topo, um **resumo** com a conta em destaque (código + nome + origem) e os três números **Relatório · Notas · Diferença**. Sem repetir totais que já aparecem embaixo.
+   - Aparece uma **caixa "Pendências"**, só com as seções que têm itens: **Faltando na conta · Duplicadas na conta · A mais na conta**. Cada seção tem título com a quantidade e o total, sem frase explicativa.
+   - Todas as seções usam as **mesmas colunas: Data · Nota · Participante · Contrapartida (só o número) · Valor**. O histórico completo do relatório fica no *hover*. O CSV usa as mesmas colunas.
    - Embaixo, à direita: **Baixar resultado** + **Reimportar**. O Reimportar escolhe o arquivo novo e já confere de novo.
 4. **Sem pendência:**
    - Reimportar vira **Ok**, que volta para a Conferência.

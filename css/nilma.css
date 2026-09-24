@@ -1,4 +1,4 @@
-/* design-n1 · Nilma UI — CSS do sistema (gerado de conferencia.html beta 0.1.24) */
+/* design-n1 · Nilma UI — CSS do sistema (gerado de conferencia.html beta 0.1.26) */
   /* ============================================================================
      Visual no estilo GitHub (Primer): fonte do sistema, cabeçalho com trilha
      "Conferência / empresa", abas sublinhadas, caixas com borda de 1px e raio
@@ -877,7 +877,7 @@
   table.vc-tabela td{vertical-align:middle;}
   table.vc-tabela th,table.vc-tabela td{padding-left:12px;padding-right:12px;}
   table.vc-tabela .vc-nw{white-space:nowrap;font-variant-numeric:tabular-nums;}
-  table.vc-tabela .vc-nome{color:var(--ink);max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  table.vc-tabela .vc-nome{color:var(--ink);max-width:420px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   table.vc-tabela .vc-onde{white-space:nowrap;color:var(--ink);}
   table.vc-tabela .vc-onde.vazio{color:var(--ink-muted);font-style:italic;}
   table.vc-tabela .vc-mut{color:var(--ink-muted);max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
