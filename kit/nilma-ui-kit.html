@@ -602,6 +602,9 @@
   .sit{display:grid;grid-template-columns:auto 28px;gap:8px;align-items:center;justify-content:end;}
   .sit .badge{justify-self:end;}
   .sit-vazio{width:28px;height:28px;}
+  /* título "Situação" termina onde terminam os badges (28px do ícone Revisar + 8px de espaço) */
+  thead th.th-sit{padding-right:calc(16px + 36px);}
+  .table-compact thead th.th-sit{padding-right:calc(12px + 36px);}
 
   /* ---------------------------------- cadastro: botão Adicionar que abre o campo ---------------------------------- */
   .ndp-add{position:relative;flex:0 0 auto;}
@@ -953,7 +956,7 @@
         <button type="button" data-theme-choice="dark" aria-label="Tema escuro" title="Escuro"><i data-ico="moon"></i></button>
         <button type="button" data-theme-choice="system" aria-label="Seguir o sistema" title="Sistema"><i data-ico="monitor"></i></button>
       </div>
-      <p>design-n1 · base: conferencia.html beta 0.1.22</p>
+      <p>design-n1 · base: conferencia.html beta 0.1.23</p>
     </div>
   </aside>
 
@@ -1266,14 +1269,14 @@
   </div>
   <div class="card">
     <h3>Tabela compacta com situação</h3>
-    <p class="sub">Usada na conferência com o balancete: Ok, diferença (com Revisar), Conferido.</p>
+    <p class="sub">Conferência com o balancete — mesmas colunas pra qualquer tipo (Conta · Origem · Notas · Soma · Saldo · Situação). O título "Situação" usa <span class="kit-mono">th-sit</span> pra alinhar com os badges.</p>
     <div class="kit-demo">
 <div class="table-wrap" style="max-height:none;"><table class="table-compact">
-  <thead><tr><th>Conta(s)</th><th>CFOP(s)</th><th class="num">Soma das notas</th><th class="num">Saldo do balancete</th><th class="num">Situação</th></tr></thead>
+  <thead><tr><th>Conta</th><th>Origem</th><th class="num">Notas</th><th class="num">Soma das notas</th><th class="num">Saldo do balancete</th><th class="num th-sit">Situação</th></tr></thead>
   <tbody>
-    <tr><td><b>75002 — Venda de Produtos</b></td><td>5101</td><td class="num">8.160,00</td><td class="num">8.160,00</td><td><div class="sit"><span class="badge badge-ok">Ok</span><span class="sit-vazio"></span></div></td></tr>
-    <tr><td><b>87529 — Telefone</b></td><td>—</td><td class="num">407,28</td><td class="num">1.010,05</td><td><div class="sit"><span class="badge badge-bad">-602,77</span><button type="button" class="icon-btn icon-btn-sm" title="Revisar esta conta" aria-label="Revisar esta conta"><i data-ico="fileSearch"></i></button></div></td></tr>
-    <tr><td><b>96088 — Devolução</b></td><td>1101</td><td class="num">93,40</td><td class="num">0,00</td><td><div class="sit"><span class="badge badge-conferido" title="Conferido manualmente">Conferido</span><button type="button" class="icon-btn icon-btn-sm" title="Revisar esta conta" aria-label="Revisar esta conta"><i data-ico="fileSearch"></i></button></div></td></tr>
+    <tr><td><b>75002 — Venda de Produtos</b></td><td>CFOP 5101</td><td class="num">5</td><td class="num">8.160,00</td><td class="num">8.160,00</td><td><div class="sit"><span class="badge badge-ok">Ok</span><span class="sit-vazio"></span></div></td></tr>
+    <tr><td><b>87529 — Telefone</b></td><td>Telefone · lanç. 38</td><td class="num">8</td><td class="num">407,28</td><td class="num">1.010,05</td><td><div class="sit"><span class="badge badge-bad">-602,77</span><button type="button" class="icon-btn icon-btn-sm" title="Revisar esta conta" aria-label="Revisar esta conta"><i data-ico="fileSearch"></i></button></div></td></tr>
+    <tr><td><b>96088 — Devolução</b></td><td>CFOP 1101</td><td class="num">1</td><td class="num">93,40</td><td class="num">0,00</td><td><div class="sit"><span class="badge badge-conferido" title="Conferido manualmente">Conferido</span><button type="button" class="icon-btn icon-btn-sm" title="Revisar esta conta" aria-label="Revisar esta conta"><i data-ico="fileSearch"></i></button></div></td></tr>
   </tbody>
 </table></div>
     </div>

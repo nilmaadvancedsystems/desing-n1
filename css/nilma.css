@@ -1,4 +1,4 @@
-/* design-n1 · Nilma UI — CSS do sistema (gerado de conferencia.html beta 0.1.22) */
+/* design-n1 · Nilma UI — CSS do sistema (gerado de conferencia.html beta 0.1.23) */
   /* ============================================================================
      Visual no estilo GitHub (Primer): fonte do sistema, cabeçalho com trilha
      "Conferência / empresa", abas sublinhadas, caixas com borda de 1px e raio
@@ -594,6 +594,9 @@
   .sit{display:grid;grid-template-columns:auto 28px;gap:8px;align-items:center;justify-content:end;}
   .sit .badge{justify-self:end;}
   .sit-vazio{width:28px;height:28px;}
+  /* título "Situação" termina onde terminam os badges (28px do ícone Revisar + 8px de espaço) */
+  thead th.th-sit{padding-right:calc(16px + 36px);}
+  .table-compact thead th.th-sit{padding-right:calc(12px + 36px);}
 
   /* ---------------------------------- cadastro: botão Adicionar que abre o campo ---------------------------------- */
   .ndp-add{position:relative;flex:0 0 auto;}
