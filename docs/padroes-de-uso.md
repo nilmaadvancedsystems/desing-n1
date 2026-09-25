@@ -165,7 +165,8 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
    - O formulário **some**.
    - No topo, um **resumo** com a conta em destaque (código + nome + origem) e os três números **Relatório · Notas · Diferença**. Sem repetir totais que já aparecem embaixo.
    - Aparece uma **caixa "Pendências"**, só com as seções que têm itens: **Faltando na conta · Duplicadas na conta · A mais na conta · ICMS**. Cada seção tem título com a quantidade e o total, sem frase explicativa.
-   - **ICMS:** lançamento com "ICMS" no texto (ex.: "ICMS a Recuperar — Pelo valor do ICMS s/ devolução") não é duplicada nem a mais: vai pra seção **ICMS** (linhas sem vermelho). O resumo mostra **Relatório da conta** líquido (lançamentos − ICMS), **Diferença**, **ICMS** e **Diferença sem ICMS** (o que sobra pra conferir). A contrapartida vem da coluna "Contrapartida" do relatório quando existe.
+   - **ICMS:** lançamento com "ICMS" no texto (ex.: "ICMS a Recuperar — Pelo valor do ICMS s/ devolução") não é duplicada nem a mais: vai pra seção **ICMS** (linhas sem vermelho). A contrapartida vem da coluna "Contrapartida" do relatório quando existe.
+   - **Resumo:** três números (Relatório da conta = soma de todos os lançamentos · Notas fiscais · **Diferença**) e, embaixo, **"O que explica a diferença"** (`.vc-comp`): Faltando na conta · Duplicadas na conta · A mais na conta · ICMS, lado a lado (4 colunas; 2 no celular). A regra (não aparece na tela): **Diferença = Faltando − Duplicadas − A mais − ICMS**; se sobrar algo, aparece a caixa "Sem explicação". O CSV fecha a mesma conta.
    - Todas as seções usam as **mesmas colunas: Data · Nota · Participante · Contrapartida (só o número) · Valor**. O histórico completo do relatório fica no *hover*. O CSV usa as mesmas colunas.
    - Embaixo, à direita: **Baixar resultado** + **Corrigi, quero reconferir**. Esse botão escolhe o arquivo novo e já confere de novo.
 4. **Sem pendência:**
