@@ -172,7 +172,7 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
    - Todas as seções usam as **mesmas colunas: Data · Nota · Participante · Contrapartida (só o número) · Valor**. O histórico completo do relatório fica no *hover*. O CSV usa as mesmas colunas.
    - Embaixo, à direita: **Baixar resultado** + **Corrigi, quero reconferir**. Esse botão escolhe o arquivo novo e já confere de novo.
 4. **Sem pendência:**
-   - Se veio de **Corrigi, quero reconferir** e zerou **todas** as pendências (ICMS não conta): aparece o **aviso de sucesso** por cima da tela (check verde, **"Tudo certo!"**, a conta Ok), **sem botão**; depois de **2 segundos** ele fecha sozinho e o app volta pro **Movimento**, com a conta **Ok**.
+   - Se veio de **Corrigi, quero reconferir** e zerou **todas** as pendências (ICMS não conta): aparece o **aviso de sucesso** limpo por cima da tela — check verde num círculo suave, **"Tudo certo!"**, a conta em negrito e "sem pendências · Ok no Relatório", botão **Ok** e uma barrinha verde embaixo contando **2 segundos**; Ok ou o fim do tempo voltam pro **Movimento** com a conta **Ok**.
    - O botão **Corrigi, quero reconferir** vira **Ok**, que volta para o Relatório.
    - A conta fica **Ok** automaticamente na tabela.
    - Se depois voltarem pendências, o Ok sai sozinho.
