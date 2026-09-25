@@ -116,6 +116,7 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 - **Cor pelo significado:** entradas em laranja, saídas em verde.
 
 ### Tabela "confere com o saldo" (compacta)
+- Vai **solta**, sem caixa nem título por cima (só a tabela, `.cc-bal`), em Geral, Entradas, Saídas, Tomados e Prestados.
 - **Colunas:** Conta · origem · Soma · Saldo · **Situação**.
 - **Situação:**
 
@@ -222,7 +223,7 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 | Algo foi salvo ou alterado | **Toast** curto (some em ~3,6 s) |
 | Ação que não dá para desfazer (apagar, sobrepor) | **Modal** com ícone, título em pergunta, texto com números em negrito, **Voltar** + ação |
 | Botão de ação que depende de arquivo (Importar) | Fica **apagado** (`disabled`, opacidade .55) até escolher o arquivo; tirar o arquivo apaga de novo. |
-| Empresa que não tem um tipo de dado (ex.: não presta serviço) | **Pergunta única e obrigatória** ao abrir a empresa: `modal({blur:true,…})` com fundo embaçado, só o título em pergunta e **Não · Sim** (não fecha com Esc nem clique fora). Respondeu "Não": tudo daquele tipo trava em toda a aplicação (`is-locked`) e some das listas "Todos"; clicar no item travado oferece desfazer ("Presta serviço"). |
+| Empresa que não tem um tipo de dado (ex.: não presta serviço) | **Pergunta única e obrigatória** ao abrir a empresa: `modal({blur:true,…})` com fundo embaçado, só o título em pergunta e **Não · Sim** (não fecha com Esc nem clique fora). Respondeu "Não": tudo daquele tipo **some** da aplicação (abas de Importação, Cadastro, Relatório e Consulta ficam `hidden`, e as listas "Todos" não mostram). Não tem desfazer na tela: quem corrige é o administrador (apaga a resposta e a pergunta volta). |
 | Item de cadastro que o usuário decide ignorar (ex.: CFOP que não vai para o Contábil) | Botão ao lado do **Adicionar** (`.ndp-nao-btn`). Marcado: a caixa fica **apagada** (`.ndp-nao-contabil`, opacidade .5) com a pílula "Não vai para o Contábil ×" pra desfazer; vincular uma conta desfaz sozinho. |
 | Opção ligada que exige preencher campos (ex.: Vendas à vista e à prazo) | Os campos viram **obrigatórios**: tentar sair (outra aba, menu, Início) abre o **modal "Preencha os lançamentos"** com quantos faltam, e os botões vazios ficam **em vermelho** (`.vista-add.vista-falta`). Fechar a janela do navegador também pede confirmação. Desligar a opção libera. |
 | Fim de uma correção que deu certo (reconferência sem pendência) | **Modal de sucesso** (`tom:'ok'`): check verde grande, título curto ("Tudo certo!"), uma frase, só **Ok** |
