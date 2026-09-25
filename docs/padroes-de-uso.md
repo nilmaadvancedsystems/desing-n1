@@ -70,8 +70,9 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
    - *Apenas novas*: acrescenta o que não existe e corrige o que mudou (ex.: lançamento).
    - *Sobrepor*: troca tudo pelo arquivo novo.
 4. **Resultado:** mensagem **flutuante** no canto, com quantas foram gravadas, quantas já existiam e quantas ficaram de fora. Some em **3,7 s**, tem **×** e fecha ao trocar de tela.
-5. **Depois de importado:** a caixa de importação **some** e fica o que foi importado (resumo + tabela). Embaixo, à direita: **Reimportar** (texto) + **Excluir** (vermelho).
-   - *Reimportar* traz a caixa de volta e já abre a escolha de arquivo.
+5. **Depois de importado:** a caixa de importação **some** e fica o que foi importado — **sem caixa nem título** (`.imp-dados`): só os números e a tabela.
+   - **Reimportar** fica no **topo da página**, à direita (botão `.btn` com ícone, na área de ações do título; no Balancete, ao lado de "Apagar ao sair"). Traz a caixa de volta e já abre a escolha de arquivo; vira "Cancelar reimportação".
+   - **Excluir** (vermelho) fica **embaixo**, à direita, sozinho.
    - *Excluir* pede confirmação.
 6. **Botão durante o processamento:** fica com spinner e o texto "Importando…", desabilitado. Ao terminar, volta ao normal.
 7. **Histórico:** toda importação ou exclusão vai para a Auditoria, com data, tipo, quantidade e o modo usado (sobreposto etc.).
