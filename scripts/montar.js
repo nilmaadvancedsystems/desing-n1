@@ -62,6 +62,8 @@ function modal(o){
     var ov=document.getElementById('modalOverlay');
     document.getElementById('modalIcon').innerHTML=svg(o.icon||'alert');
     ov.querySelector('.modal').classList.toggle('modal-ok',o.tom==='ok');
+    ov.classList.toggle('modal-blur',!!o.blur);
+    document.getElementById('modalText').hidden=!o.text;
     document.getElementById('modalTitle').textContent=o.title;
     document.getElementById('modalText').innerHTML=o.text||'';
     var a=document.getElementById('modalActions');a.innerHTML='';
