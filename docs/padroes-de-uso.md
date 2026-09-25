@@ -116,9 +116,12 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 - **Números principais** em `stat-grid`, com rótulo curto, numa linha só quando couber.
 - **Cor pelo significado:** entradas em laranja, saídas em verde.
 
+### Ações do topo da página
+- Botões do canto superior direito (Reimportar, Baixar CSV): **vermelhos** (`.btn.btn-primary`), **sem ícone**.
+
 ### Tabela "confere com o saldo" (compacta)
 - Vai **solta**, sem caixa nem título por cima (só a tabela, `.cc-bal`), em Geral, Entradas, Saídas, Tomados e Prestados.
-- **Conta com dois tipos de nota** (ligada a CFOP e a categoria de serviço, ex.: Telefone = CFOP 1303 + Telefone/Internet): cada tela confere a sua parte — notas com CFOP em Entradas/Saídas, notas de serviço em Tomados/Prestados — e o **saldo é dividido**: em cada tela, o Saldo do balancete desconta a parte da outra, com `*` e a conta no *hover* ("Saldo 420,10 − 71,17 de notas de serviço"). As duas telas mostram a mesma diferença. O Verificar confere os dois tipos juntos.
+- **Conta com dois tipos de nota** (ligada a CFOP e a categoria de serviço, ex.: Telefone = CFOP 1303 + Telefone/Internet): se tem **nota de serviço** nela no período, a conferência é feita **uma vez só, em Serviços**, somando as notas de serviço e as com CFOP (Descrição: "Telefone, CFOP 1303"); nas Entradas/Saídas a linha fica **cinza** (`tr.linha-em-serv`) com "Conferida em Tomados". Sem nota de serviço, fica normal em Entradas/Saídas.
 - **Vínculo errado vindo de antes** (ex.: conta do Passivo ligada, que o Cadastro não oferece mais): a linha fica **vermelha** (`tr.linha-passivo`) com ícone de alerta antes da conta; o aviso aparece ao passar o mouse e diz onde corrigir.
 - **Colunas:** Conta · origem · Soma · Saldo · **Situação**.
 - **Situação:**

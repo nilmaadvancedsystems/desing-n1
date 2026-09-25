@@ -1,4 +1,4 @@
-/* design-n1 · Nilma UI — CSS do sistema (gerado de conferencia.html beta 0.1.50) */
+/* design-n1 · Nilma UI — CSS do sistema (gerado de conferencia.html beta 0.1.51) */
   /* ============================================================================
      Visual no estilo GitHub (Primer): fonte do sistema, cabeçalho com trilha
      "Conferência / empresa", abas sublinhadas, caixas com borda de 1px e raio
@@ -323,7 +323,8 @@
   /* dados importados: sem caixa nem título, só os números e a tabela */
   .imp-dados{margin-bottom:16px;}
   .cc-bal{margin-bottom:16px;}
-  .saldo-div{color:var(--ink-muted);margin-left:2px;cursor:help;}
+  tr.linha-em-serv > td{color:var(--ink-muted);}
+  tr.linha-em-serv > td b{color:var(--ink-muted);font-weight:600;}
   tr.linha-passivo > td{background:var(--destructive-soft);}
   tr.linha-passivo > td:first-child{box-shadow:inset 3px 0 0 var(--destructive);}
   tr.linha-passivo > td:first-child b{color:var(--destructive);}
