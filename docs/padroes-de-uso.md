@@ -110,7 +110,7 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 ## 5. Relatório (tela de conferência)
 
 - No Movimento, as abas são **Relatório** (ícone `relatorio`) · **Checklist** (ícone `checklist`, título da página "Naturezas de CFOP") · **Consulta**.
-- **Divergência de lançamento:** `Atual <b>00182</b> — Correto: <b>00001</b>` quando o lançamento certo foi cadastrado pelo usuário; `Atual … — Maioria: …` quando vem da maioria das notas. Código sempre com os zeros da nota.
+- **Divergência de lançamento:** `Atual <b>00182</b> — Lanç. Configurado: <b>00001</b>` quando o lançamento certo foi cadastrado; `Atual … — Lanç. Padrão: …` quando vem da maioria das notas. Código sempre com os zeros da nota.
 
 ### Resumo
 - **Números principais** em `stat-grid`, com rótulo curto, numa linha só quando couber.
