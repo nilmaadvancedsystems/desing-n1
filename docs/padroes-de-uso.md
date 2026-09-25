@@ -230,6 +230,7 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 |---|---|
 | Algo foi salvo ou alterado | **Toast** curto (some em ~3,6 s) |
 | Ação que não dá para desfazer (apagar, sobrepor) | **Modal** com ícone, título em pergunta, texto com números em negrito, **Voltar** + ação |
+| Aba que depende de um arquivo (Cadastro, Relatório, Consulta) | Guiada pela Importação: enquanto o arquivo não foi importado, a aba fica **apagada** (`.is-locked`); clicar abre o aviso "… ainda não importadas" com botão pra importar. Se a aba aberta ficou sem dados, abre na primeira que tem. |
 | Botão de ação que depende de arquivo (Importar) | Fica **apagado** (`disabled`, opacidade .55) até escolher o arquivo; tirar o arquivo apaga de novo. |
 | Empresa que não tem um tipo de dado (ex.: não presta serviço) | **Pergunta única e obrigatória** ao abrir a empresa: `modal({blur:true,…})` com fundo embaçado, só o título em pergunta e **Não · Sim** (não fecha com Esc nem clique fora). Respondeu "Não": tudo daquele tipo **some** da aplicação (abas de Importação, Cadastro, Relatório e Consulta ficam `hidden`, e as listas "Todos" não mostram). Não tem desfazer na tela: quem corrige é o administrador (apaga a resposta e a pergunta volta). |
 | Item de cadastro que o usuário decide ignorar (ex.: CFOP que não vai para o Contábil) | Botão ao lado do **Adicionar** (`.ndp-nao-btn`). Marcado: a caixa fica **apagada** (`.ndp-nao-contabil`, opacidade .5) com a pílula "Não vai para o Contábil ×" pra desfazer; vincular uma conta desfaz sozinho. |
