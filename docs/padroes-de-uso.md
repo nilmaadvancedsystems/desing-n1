@@ -215,7 +215,7 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 |---|---|
 | Algo foi salvo ou alterado | **Toast** curto (some em ~3,6 s) |
 | Ação que não dá para desfazer (apagar, sobrepor) | **Modal** com ícone, título em pergunta, texto com números em negrito, **Voltar** + ação |
-| Opção ligada que exige preencher campos (ex.: Vendas à vista e a prazo) | Os campos viram **obrigatórios**: tentar sair (outra aba, menu, Início) abre o **modal "Preencha os lançamentos"** com quantos faltam, e os botões vazios ficam **em vermelho** (`.vista-add.vista-falta`). Fechar a janela do navegador também pede confirmação. Desligar a opção libera. |
+| Opção ligada que exige preencher campos (ex.: Vendas à vista e à prazo) | Os campos viram **obrigatórios**: tentar sair (outra aba, menu, Início) abre o **modal "Preencha os lançamentos"** com quantos faltam, e os botões vazios ficam **em vermelho** (`.vista-add.vista-falta`). Fechar a janela do navegador também pede confirmação. Desligar a opção libera. |
 | Fim de uma correção que deu certo (reconferência sem pendência) | **Modal de sucesso** (`tom:'ok'`): check verde grande, título curto ("Tudo certo!"), uma frase, só **Ok** |
 | Erro ou atenção dentro de um card | **Alerta** (ícone + título + texto) |
 | Deu certo e precisa ficar visível | Alerta **verde** ou faixa curta |
