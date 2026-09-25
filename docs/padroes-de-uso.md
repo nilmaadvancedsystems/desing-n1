@@ -171,6 +171,12 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
    - Na tabela, a conta mostra **Conferido**.
 6. **O arquivo nunca é salvo.** Sair da tela descarta o relatório e o resultado.
 7. **Auditoria:** registra Ok, Conferido e Desfeito.
+8. **Várias contas no mesmo CFOP** (linha "70002 + 70006"):
+   - O formulário mostra **um campo de relatório por conta** ("Relatório da conta 70002 — …"); o Conferir cobra todos.
+   - A conferência junta os relatórios contra as notas; cada linha guarda de qual conta veio.
+   - No resultado, um menu de abas em cima (`.steps` `#vcAbas`): **Todas · 70002 · 70006**. Todas = visão somada (Faltando fica só aqui). Cada conta = relatório da conta + **Pendências na conta** (duplicadas e a mais daquele relatório).
+   - **Corrigi, quero reconferir:** numa aba de conta troca o relatório dela; em Todas pergunta qual conta foi corrigida.
+   - Ok / Conferido valem para todas as contas do grupo; o CSV ganha a coluna **Conta**.
 
 ---
 
