@@ -173,6 +173,7 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
    - A conta fica **Ok** automaticamente na tabela.
    - Se depois voltarem pendências, o Ok sai sozinho.
 5. **Seguir com pendência:**
+   - **Só para Água, Internet, Energia Elétrica e Locação de Sistemas** (pelo nome da conta, natureza do CFOP ou categoria do serviço). As outras contas não têm o botão: precisam ficar **Ok**; um "Conferido" antigo delas volta a mostrar a diferença.
    - O botão **"Marcar como conferido"** fica no canto da caixa de pendências.
    - Marcado, vira **"Conferido"** laranja; clicar de novo desfaz.
    - Na tabela, a conta mostra **Conferido**.
