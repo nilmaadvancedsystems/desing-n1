@@ -101,6 +101,7 @@ Catálogo das classes do `css/nilma.css`. Os exemplos ao vivo e o código pronto
 | Faixa ok | `.parity` |
 | Toast | `toast('mensagem')` → `.toast-region` › `.toast` |
 | Modal | `modal({icon,title,text,buttons})` → `.modal-overlay` › `.modal` |
+| Modal obrigatório (pergunta) | `modal({blur:true,title:'…?',text:'',buttons:[Não,Sim]})` → `.modal-overlay.modal-blur` |
 | Modal de sucesso | `modal({tom:'ok',icon:'checkCircle',title,text,buttons})` → `.modal.modal-ok` (ícone verde 48px, tudo centralizado) |
 | Vazio simples | `p.empty` |
 | Vazio grande | `.gh-blank` › svg + h4 + p |

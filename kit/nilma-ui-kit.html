@@ -899,10 +899,12 @@
 
   /* seletor Resumido/Detalhado no canto superior direito */
   .steps.steps-topo{margin:0;}
-  /* Cadastro: abas + "não presta serviço" na mesma linha */
-  .cad-topo{display:flex;align-items:center;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;margin-bottom:16px;}
-  .cad-topo .steps{margin-bottom:0;}
-  .cad-sem-prest{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--ink);cursor:pointer;user-select:none;}
+  /* pergunta obrigatória: fundo embaçado */
+  .modal-overlay.modal-blur{backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+  /* CFOP que não vai para o Contábil: caixa apagada */
+  .ndp-item.ndp-nao-contabil{opacity:.5;transition:opacity .15s;}
+  .ndp-item.ndp-nao-contabil:hover{opacity:.8;}
+  .ndp-nao-btn{margin-left:8px;}
   #perDetalhe .painel{margin-top:16px;}
   #app{display:block;}
 </style>
@@ -967,7 +969,7 @@
         <button type="button" data-theme-choice="dark" aria-label="Tema escuro" title="Escuro"><i data-ico="moon"></i></button>
         <button type="button" data-theme-choice="system" aria-label="Seguir o sistema" title="Sistema"><i data-ico="monitor"></i></button>
       </div>
-      <p>design-n1 · base: conferencia.html beta 0.1.34</p>
+      <p>design-n1 · base: conferencia.html beta 0.1.36</p>
     </div>
   </aside>
 
