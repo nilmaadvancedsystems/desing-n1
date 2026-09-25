@@ -37,6 +37,8 @@ Use sempre `var(--token)`, nunca a cor direto. O tema escuro troca só os valore
 | `--danger-ink` | `#953800` | `#F0883E` |
 | `--warn` | `#9A6700` | `#D29922` |
 | `--warn-soft` | `#FFF8C5` | `#BB800926` |
+| `--info` | `#0969DA` | `#58A6FF` |
+| `--info-soft` | `#DDF4FF` | `#388BFD26` |
 | `--header-bg` | `#F7F7F8` | `#08080A` |
 | `--tab-active` | `#C62B32` | `#F0626A` |
 | `--hover-bg` | `#8C8C9226` | `#8C8C9233` |

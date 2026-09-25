@@ -88,7 +88,7 @@ Catálogo das classes do `css/nilma.css`. Os exemplos ao vivo e o código pronto
 | Badge | `.badge` + `.badge-ok` / `.badge-bad` / `.badge-neutral` / `.badge-conferido` |
 | Conta vinculada | `.ndp-chip` (+ `button` ×) |
 | Pílula de valor | `.vista-pill` › `.vista-pill-txt` (b) + `.vista-pill-x` |
-| Grupo da conta (só em listas de escolher/vincular conta) | `span.grupo-tag` — (A) ativo · (P) passivo · (D) despesa · (R) receita, na frente do código |
+| Grupo da conta (só em listas de escolher/vincular conta) | `span.grupo-tag.g-a|g-p|g-d|g-r` — etiqueta com o nome (Ativo verde · Passivo amarelo · Despesa laranja · Receita azul `--info`), largura fixa, na frente do código; lista na ordem do plano de contas |
 | Pílula VAZIO (campo sem valor) | `span.pill-vazio` — cinza, pequena, maiúsculas |
 | Pílula de adicionar | `button.vista-add` (tracejada); `.vista-falta` = obrigatório faltando (vermelho) |
 | Tipo com cor | `.cons-tipo` › `i` (bolinha) + texto |
