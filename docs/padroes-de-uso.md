@@ -118,7 +118,7 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 
 ### Tabela "confere com o saldo" (compacta)
 - Vai **solta**, sem caixa nem título por cima (só a tabela, `.cc-bal`), em Geral, Entradas, Saídas, Tomados e Prestados.
-- **Conta com dois tipos de nota** (ligada a CFOP e a categoria de serviço, ex.: Telefone = CFOP 1303 + Telefone/Internet): é conferida **uma vez só, na tela de serviços**, somando as duas; a Descrição lista as categorias e o CFOP. Nas Entradas/Saídas a linha fica **cinza** (`tr.linha-em-serv`) com a etiqueta "Conferida em Tomados".
+- **Conta com dois tipos de nota** (ligada a CFOP e a categoria de serviço, ex.: Telefone = CFOP 1303 + Telefone/Internet): cada tela confere a sua parte — notas com CFOP em Entradas/Saídas, notas de serviço em Tomados/Prestados — e o **saldo é dividido**: em cada tela, o Saldo do balancete desconta a parte da outra, com `*` e a conta no *hover* ("Saldo 420,10 − 71,17 de notas de serviço"). As duas telas mostram a mesma diferença. O Verificar confere os dois tipos juntos.
 - **Vínculo errado vindo de antes** (ex.: conta do Passivo ligada, que o Cadastro não oferece mais): a linha fica **vermelha** (`tr.linha-passivo`) com ícone de alerta antes da conta; o aviso aparece ao passar o mouse e diz onde corrigir.
 - **Colunas:** Conta · origem · Soma · Saldo · **Situação**.
 - **Situação:**
@@ -271,3 +271,11 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 - [ ] Funciona no tema claro **e** escuro? E no celular (sem rolagem lateral)?
 - [ ] Botões só de ícone têm `title` e `aria-label`?
 - [ ] Tamanhos iguais aos componentes do kit (não criou um tamanho novo)?
+
+
+## Consulta de notas
+
+- Duas abas: **Fiscais** (Entradas + Saídas) e **Serviços** (Tomados + Prestados). Sem "Todos".
+- Colunas Fiscais: **Tipo · Data · Nota · Participante · CFOP · Lançamento · Valor (R$)**.
+- Colunas Serviços: **Tipo · Data · Nota · Participante · Valor de ISS · Lançamento · Valor**.
+- O CSV usa as mesmas colunas.
