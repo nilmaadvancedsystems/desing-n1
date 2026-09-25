@@ -118,6 +118,7 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 
 ### Tabela "confere com o saldo" (compacta)
 - Vai **solta**, sem caixa nem título por cima (só a tabela, `.cc-bal`), em Geral, Entradas, Saídas, Tomados e Prestados.
+- **Conta com dois tipos de nota** (ligada a CFOP e a categoria de serviço, ex.: Telefone = CFOP 1303 + Telefone/Internet): é conferida **uma vez só, na tela de serviços**, somando as duas; a Descrição lista as categorias e o CFOP. Nas Entradas/Saídas a linha fica **cinza** (`tr.linha-em-serv`) com a etiqueta "Conferida em Tomados".
 - **Vínculo errado vindo de antes** (ex.: conta do Passivo ligada, que o Cadastro não oferece mais): a linha fica **vermelha** (`tr.linha-passivo`) com ícone de alerta antes da conta; o aviso aparece ao passar o mouse e diz onde corrigir.
 - **Colunas:** Conta · origem · Soma · Saldo · **Situação**.
 - **Situação:**
