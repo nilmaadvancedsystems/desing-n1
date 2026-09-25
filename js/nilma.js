@@ -12,6 +12,8 @@
    Cada página é um <section data-view="v" hidden> dentro de .content.
    ===================================================================== */
 var ICONS = {
+  relatorio:'<path d="M14.5 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7.5Z"/><path d="M14.5 2.5v5h5"/><path d="M8.5 18v-2"/><path d="M12 18v-5"/><path d="M15.5 18v-3.5"/>',
+  checklist:'<path d="m3.5 6.5 1.5 1.5 3-3"/><path d="m3.5 12.5 1.5 1.5 3-3"/><path d="m3.5 18.5 1.5 1.5 3-3"/><path d="M11.5 7h9"/><path d="M11.5 13h9"/><path d="M11.5 19h9"/>',
   briefcase:'<rect x="2.5" y="7" width="19" height="13" rx="2"/><path d="M8.5 7V5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v2"/><path d="M2.5 12.5h19"/>',
   fileDown:'<path d="M14.5 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7.5Z"/><path d="M14.5 2.5v5h5"/><path d="M12 11v6"/><path d="m9.5 14.5 2.5 2.5 2.5-2.5"/>',
   fileUp:'<path d="M14.5 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7.5Z"/><path d="M14.5 2.5v5h5"/><path d="M12 17v-6"/><path d="m9.5 13.5 2.5-2.5 2.5 2.5"/>',

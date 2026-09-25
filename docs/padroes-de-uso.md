@@ -106,7 +106,10 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 
 ---
 
-## 5. Conferência
+## 5. Relatório (tela de conferência)
+
+- No Movimento, as abas são **Relatório** (ícone `relatorio`) · **Checklist** (ícone `checklist`, título da página "Naturezas de CFOP") · **Consulta**.
+- **Divergência de lançamento:** `Atual <b>00182</b> — Correto: <b>00001</b>` quando o lançamento certo foi cadastrado pelo usuário; `Atual … — Maioria: …` quando vem da maioria das notas. Código sempre com os zeros da nota.
 
 ### Resumo
 - **Números principais** em `stat-grid`, com rótulo curto, numa linha só quando couber.
@@ -159,7 +162,7 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
    - Embaixo, à direita: **Baixar resultado** + **Corrigi, quero reconferir**. Esse botão escolhe o arquivo novo e já confere de novo.
 4. **Sem pendência:**
    - Se veio de **Corrigi, quero reconferir**, aparece o **aviso de sucesso** por cima da tela: check verde, **"Tudo certo!"**, a conta e que ela ficou **Ok**, botão **Ok**.
-   - O botão **Corrigi, quero reconferir** vira **Ok**, que volta para a Conferência.
+   - O botão **Corrigi, quero reconferir** vira **Ok**, que volta para o Relatório.
    - A conta fica **Ok** automaticamente na tabela.
    - Se depois voltarem pendências, o Ok sai sozinho.
 5. **Seguir com pendência:**
