@@ -836,6 +836,8 @@
   .serv-bloco-corpo .ndp-contas-row{margin:0;}
   .serv-resumo{display:inline-block;padding-top:5px;font-size:13px;color:var(--ink-muted);}
   .serv-forn-lista{border:1px solid var(--border);border-radius:6px;overflow:visible;}
+  /* a lista de sugestões usa a mesma classe: ela precisa rolar dentro da caixa */
+  .serv-lista.serv-forn-lista{overflow-y:auto;border-radius:12px;}
   .serv-forn-item{display:flex;align-items:center;gap:12px;min-height:40px;padding:6px 8px 6px 12px;border-bottom:1px solid var(--border);}
   .serv-forn-item:hover{background:var(--hover-bg);}
   .serv-forn-nome{flex:1 1 auto;min-width:0;font-size:13.5px;font-weight:500;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
@@ -969,7 +971,7 @@
         <button type="button" data-theme-choice="dark" aria-label="Tema escuro" title="Escuro"><i data-ico="moon"></i></button>
         <button type="button" data-theme-choice="system" aria-label="Seguir o sistema" title="Sistema"><i data-ico="monitor"></i></button>
       </div>
-      <p>design-n1 · base: conferencia.html beta 0.1.36</p>
+      <p>design-n1 · base: conferencia.html beta 0.1.37</p>
     </div>
   </aside>
 
