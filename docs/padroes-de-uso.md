@@ -118,6 +118,7 @@ Referência viva: Conferência Contábil (`conferencia-nilma.web.app`), beta 0.1
 
 ### Tabela "confere com o saldo" (compacta)
 - Vai **solta**, sem caixa nem título por cima (só a tabela, `.cc-bal`), em Geral, Entradas, Saídas, Tomados e Prestados.
+- **Vínculo errado vindo de antes** (ex.: conta do Passivo ligada, que o Cadastro não oferece mais): a linha fica **vermelha** (`tr.linha-passivo`) com ícone de alerta antes da conta; o aviso aparece ao passar o mouse e diz onde corrigir.
 - **Colunas:** Conta · origem · Soma · Saldo · **Situação**.
 - **Situação:**
 
